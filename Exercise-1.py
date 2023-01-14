@@ -6,7 +6,7 @@ class BinarySearchTreeNode:
 
     def add_child(self, data):
         if data == self.data:
-            return
+            return  # node already exist
         if data < self.data:
             if self.left:
                 self.left.add_child(data)
@@ -47,7 +47,6 @@ class BinarySearchTreeNode:
             elements += self.left.post_order_traversal()
         if self.right:
             elements += self.right.post_order_traversal()
-
         elements.append(self.data)
         return elements
 
@@ -57,7 +56,6 @@ class BinarySearchTreeNode:
             elements += self.left.pre_order_traversal()
         if self.right:
             elements += self.right.pre_order_traversal()
-
         return elements
 
     def find_max(self):
@@ -75,26 +73,27 @@ class BinarySearchTreeNode:
         right_sum = self.right.calculate_sum() if self.right else 0
         return self.data + left_sum + right_sum
 
-    def build_tree(elements):
-         root = BinarySearchTreeNode(elements[0])
-         for i in range(1, len(elements)):
-             root.add_child(elements[i])
 
-         return root
+def build_tree(elements):
+    root = BinarySearchTreeNode(elements[0])
+    for i in range(1, len(elements)):
+        root.add_child(elements[i])
+    return root
 
-    if __name__ == '__main__':
-        name = ['J', 'O', 'S', 'H', 'U', 'A', 'C,', 'M', 'I', 'N', 'a']
-        name_tree = build_tree(name)
-        numbers = [2, 15, 66, 77, 88, 14, 7, 11, 20, 9, 23, 41]
-        number_tree = build_tree(numbers)
 
-        print("Letter A is in the list? ", name_tree.search("A"))
-        print("Letter V is in the list? ", name_tree.search("V"))
-        print("Letter in my name but alphabetically: ", name_tree.in_order_traversal())
-        print("Input numbers:", numbers)
-        print("Min:", name_tree.find_min())
-        print("Max:", name_tree.find_max())
-        print("Sum:", number_tree.calculate_sum())
-        print("In order traversal:", name_tree.in_order_traversal())
-        print("Pre order traversal:", name_tree.pre_order_traversal())
-        print("Post order traversal:", name_tree.post_order_traversal())
+if __name__ == '__main__':
+    name = ['J', 'O', 'S', 'H', 'U', 'A', 'C,', 'M', 'I', 'N', 'a']
+    name_tree = build_tree(name)
+    numbers = [2, 15, 66, 77, 88, 14, 7, 11, 20, 9, 23, 41]
+    number_tree = build_tree(numbers)
+
+    print("Letter A is in the list? ", name_tree.search("A"))
+    print("Letter V is in the list? ", name_tree.search("v"))
+    print("Letter in my name but alphabetically: ", name_tree.in_order_traversal())
+    print("Input numbers:", numbers)
+    print("Min:", name_tree.find_min())
+    print("Max:", name_tree.find_max())
+    print("Sum:", number_tree.calculate_sum())
+    print("In order traversal:", name_tree.in_order_traversal())
+    print("Pre order traversal:", name_tree.pre_order_traversal())
+    print("Post order traversal:", name_tree.post_order_traversal())
