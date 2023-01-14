@@ -71,3 +71,8 @@ class BinarySearchTreeNode:
             self.right = self.right.old_delete(min_val)
 
         return self
+
+    def new_delete(self, val):
+        if val < self.data:
+            if self.left:
+                self.left = self.left.new_delete(val)
