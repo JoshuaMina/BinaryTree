@@ -57,3 +57,4 @@ class BinarySearchTreeNode:
                 self.left = self.left.old_delete(val)
         elif val > self.data:
             if self.right:
+                self.right = self.right.old_delete(val)
