@@ -79,3 +79,6 @@ class BinarySearchTreeNode:
         elif val > self.data:
             if self.right:
                 self.right = self.right.new_delete(val)
+        else:
+            if self.left is None and self.right is None:
+                return None
