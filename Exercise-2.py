@@ -50,3 +50,6 @@ class BinarySearchTreeNode:
         if self.left is None:
             return self.data
         return self.left.find_min()
+
+    def old_delete(self, val):
+        if val < self.data:
