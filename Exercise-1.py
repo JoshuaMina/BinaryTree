@@ -87,3 +87,9 @@ class BinarySearchTreeNode:
         name_tree = build_tree(name)
         numbers = [2, 15, 66, 77, 88, 14, 7, 11, 20, 9, 23, 41]
         number_tree = build_tree(numbers)
+
+        print("Letter A is in the list? ", name_tree.search("A"))
+        print("Letter V is in the list? ", name_tree.search("V"))
+        print("Letter in my name but alphabetically: ", name_tree.in_order_traversal())
+        print("Input numbers:", numbers)
+        print("Min:", name_tree.find_min())
