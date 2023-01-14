@@ -28,3 +28,8 @@ class BinarySearchTreeNode:
                 return self.left.search(val)
             else:
                 return False
+        if val > self.data:
+            if self.right:
+                return self.right.search(val)
+            else:
+                return False
