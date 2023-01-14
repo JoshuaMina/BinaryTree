@@ -18,3 +18,7 @@ class BinarySearchTreeNode:
                 self.right.add_child(data)
             else:
                 self.right = BinarySearchTreeNode(data)
+
+    def search(self, val):
+        if self.data == val:
+            return True
