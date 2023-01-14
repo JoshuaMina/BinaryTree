@@ -93,3 +93,5 @@ class BinarySearchTreeNode:
         print("Letter in my name but alphabetically: ", name_tree.in_order_traversal())
         print("Input numbers:", numbers)
         print("Min:", name_tree.find_min())
+        print("Max:", name_tree.find_max())
+        print("Sum:", number_tree.calculate_sum())
