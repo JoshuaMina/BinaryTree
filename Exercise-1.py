@@ -77,3 +77,7 @@ class BinarySearchTreeNode:
 
     def build_tree(elements):
          root = BinarySearchTreeNode(elements[0])
+         for i in range(1, len(elements)):
+             root.add_child(elements[i])
+
+         return root
