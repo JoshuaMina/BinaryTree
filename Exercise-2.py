@@ -63,3 +63,5 @@ class BinarySearchTreeNode:
                 return None
             elif self.left is None:
                 return self.right
+            elif self.right is None:
+                return self.left
