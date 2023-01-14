@@ -86,3 +86,7 @@ class BinarySearchTreeNode:
                 return self.right
             elif self.right is None:
                 return self.right
+
+            max_val = self.left.find_max()
+            self.data = max_val
+            self.left = self.left.new_delete(max_val)
