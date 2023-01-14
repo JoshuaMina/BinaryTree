@@ -85,3 +85,5 @@ class BinarySearchTreeNode:
     if __name__ == '__main__':
         name = ['J', 'O', 'S', 'H', 'U', 'A', 'C,', 'M', 'I', 'N', 'a']
         name_tree = build_tree(name)
+        numbers = [2, 15, 66, 77, 88, 14, 7, 11, 20, 9, 23, 41]
+        number_tree = build_tree(numbers)
