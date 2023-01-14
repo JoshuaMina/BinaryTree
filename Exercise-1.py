@@ -59,3 +59,8 @@ class BinarySearchTreeNode:
             elements += self.right.pre_order_traversal()
 
         return elements
+
+    def find_max(self):
+        if self.right is None:
+            return self.data
+        return self.right.find_max()
