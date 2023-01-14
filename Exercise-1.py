@@ -95,3 +95,6 @@ class BinarySearchTreeNode:
         print("Min:", name_tree.find_min())
         print("Max:", name_tree.find_max())
         print("Sum:", number_tree.calculate_sum())
+        print("In order traversal:", name_tree.in_order_traversal())
+        print("Pre order traversal:", name_tree.pre_order_traversal())
+        print("Post order traversal:", name_tree.post_order_traversal())
