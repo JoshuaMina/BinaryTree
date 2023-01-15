@@ -90,3 +90,14 @@ class BinarySearchTreeNode:
             max_val = self.left.find_max()
             self.data = max_val
             self.left = self.left.new_delete(max_val)
+
+        return self
+
+def build_tree(elements):
+    print("\nBuilding tree with these elements:",elements)
+    root = BinarySearchTreeNode(elements[0])
+
+    for i in range(1,len(elements)):
+        root.add_child(elements[i])
+
+    return root
