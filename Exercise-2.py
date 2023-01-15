@@ -107,3 +107,7 @@ if __name__ == '__main__':
     name_tree = build_tree(name)
     name_tree.new_delete('J')
     print("After deleting J ",name_tree.in_order_traversal())
+
+    name_tree = build_tree(name)
+    name_tree.new_delete('a')
+    print("After deleting a ", name_tree.in_order_traversal())
