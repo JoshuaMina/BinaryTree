@@ -101,3 +101,9 @@ def build_tree(elements):
         root.add_child(elements[i])
 
     return root
+
+if __name__ == '__main__':
+    name = ['J','O','S','H','U','A','C,','M','I','N','a']
+    name_tree = build_tree(name)
+    name_tree.new_delete('J')
+    print("After deleting J ",name_tree.in_order_traversal())
